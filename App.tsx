@@ -3,9 +3,8 @@ import Navigation from './components/Navigation';
 import SkyView from './components/SkyView';
 import TonightFeed from './components/TonightFeed';
 import EventCalendar from './components/EventCalendar';
-import ObservationLogBook from './components/ObservationLogBook'; // Fix: Typo in original thought, using correct name
-import { AppView } from './types';
 import ObservationLog from './components/ObservationLog';
+import { AppView } from './types';
 
 function App() {
   const [currentView, setCurrentView] = useState<AppView>(AppView.HOME);
