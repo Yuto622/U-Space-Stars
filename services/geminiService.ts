@@ -1,10 +1,9 @@
 import { GoogleGenAI } from "@google/genai";
 
-const apiKey = process.env.API_KEY || '';
-const ai = new GoogleGenAI({ apiKey });
-
 export const getStarInfo = async (starName: string, constellation: string): Promise<string> => {
   try {
+    // Initialize inside the function to avoid top-level process.env access issues
+    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
     const model = 'gemini-2.5-flash';
     const prompt = `
       あなたはプロの天文学者で、かつ親しみやすいガイドです。
@@ -29,6 +28,8 @@ export const getStarInfo = async (starName: string, constellation: string): Prom
 
 export const getTonightForecast = async (dateStr: string, location: string): Promise<string> => {
   try {
+    // Initialize inside the function to avoid top-level process.env access issues
+    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
     const model = 'gemini-2.5-flash';
     const prompt = `
       日付: ${dateStr}

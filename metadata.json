@@ -3,7 +3,6 @@
   "description": "空にかざすだけで、今夜の宇宙が分かるアプリ。AR星空マップ、観測ログ、AIによる星空解説機能付き。",
   "requestFramePermissions": [
     "camera",
-    "microphone",
     "geolocation"
   ]
 }
